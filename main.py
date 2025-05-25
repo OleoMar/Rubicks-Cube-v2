@@ -15,28 +15,28 @@ def scramble_cube(cube, moves_count=5):
 
 if __name__ == "__main__":
     original = scramble_cube(Cube2x2(), moves_count=5)
-    print("Состояние после перемешивания:", original.state)
+    print("State after scramble:", original.state)
 
     # DFS
-    print("\nРешение с помощью DFS:")
+    print("\nSolution using DFS:")
     start = time.time()
     result_dfs = dfs(Cube2x2(original.state[:]))
-    print("Решение:", result_dfs)
-    print("Время:", time.time() - start)
+    print("Solution:", result_dfs)
+    print("Time:", time.time() - start)
     test_solution("DFS", original, result_dfs)
 
     # BFS
-    print("\nРешение с помощью BFS:")
+    print("\nSolution using BFS:")
     start = time.time()
     result_bfs = bfs(Cube2x2(original.state[:]))
-    print("Решение:", result_bfs)
-    print("Время:", time.time() - start)
+    print("Solution:", result_bfs)
+    print("time:", time.time() - start)
     test_solution("BFS", original, result_bfs)
 
     # A*
-    print("\nРешение с помощью A*:")
+    print("\nSolution usingA*:")
     start = time.time()
     result_astar = a_star(Cube2x2(original.state[:]))
-    print("Решение:", result_astar)
-    print("Время:", time.time() - start)
+    print("Solution:", result_astar)
+    print("Time:", time.time() - start)
     test_solution("A*", original, result_astar)

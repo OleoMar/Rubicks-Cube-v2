@@ -8,6 +8,6 @@ def validate_solution(start_state, moves):
 
 def test_solution(name, start_cube, moves):
     is_valid = validate_solution(start_cube.state, moves)
-    print(f"\nПроверка решения {name}:")
-    print("Ходы:", moves)
-    print("Решение корректно?" , "✅ Да" if is_valid else "❌ Нет")
+    print(f"\nCheck the Solution {name}:")
+    print("Moves:", moves)
+    print("Is Solved:" , " Yes" if is_valid else " No")
